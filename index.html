@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Property Basic</title>
+    <style>
+        body {
+            font-family: LINE Seed Sans KR;
+            width: 964px;
+            margin: 0 auto;
+        }
+        .clear {
+            clear: both;
+        }
+        #aside {
+            float: left;
+            width: 260px;
+        }
+        #section {
+            float: right;
+            width: 700px;
+        }
+        /*div {
+            border: solid 1px;
+        }*/
+        /*링크 데코레이션*/
+        /*a:link {
+            color: green;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            text-decoration: none;
+        }
+        a:active {
+            color: yellow;
+            text-decoration: none;
+        }*/
+        /*링크 데코레이션 박스*/
+        a{margin-left: 50px;}
+        a:link, a:visited{
+            background-color: indigo;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            background-color: rgb(145, 137, 137);
+        }
+    </style>
+</head>
+<body>
+    <div id="header"><h1>Header</h1></div>
+    <div id="navigation"><h1>Navigation</h1>
+        <a href="tag-selector.html">태그 선택자</a>&nbsp;
+        <a href="id-selector.html">ID 선택자</a>&nbsp;
+        <a href="shopping-news.html">쇼핑뉴스</a>&nbsp;
+        <a href="festival.html">축제정보</a>
+    </div>
+    <div class="clear"></div>
+
+    <div id="aside">
+        <h1>Aside</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <h1>
+    </div>
+        
+    <div id="section">
+        <h1>Section</h1>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    </div>
+    <div class="clear"></div>
+
+    <div id="footer"><h1>Footer</h1></div>
+    <div class="clear"></div>
+</body>
+</html>
