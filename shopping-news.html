@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 선택자</title>
+    <style>
+        /*Web Fonts 선언*/
+        @font-face {
+        font-family: 'LINESeedKR-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'LINESeedKR-Rg';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+      }
+        @font-face {
+        font-family: 'LINESeedKR-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        }
+        body {
+            font-family: "LINESeedKR-Rg";
+        }
+        .green {
+            color: green;
+            font-weight: bold;
+        }
+        .blue {
+            color: blue;
+            font-weight: bold;
+        }
+        a:link {
+            color: green;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            text-decoration: none;
+        }
+        a:active {
+            color: yellow;
+            text-decoration: none;
+        }
+        a{margin-left: 100px;}
+        a:link, a:visited{
+            background-color: brown;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            background-color: rgb(145, 137, 137);
+        }
+        a{margin-left: 100px;}
+        a:link, a:visited{
+            background-color: indigo;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            background-color: rgb(145, 137, 137);
+        }
+    </style>
+</head>
+<body>
+    <h2>쇼핑뉴스</h2>
+    <ul>
+        <li><span class="green">루바토</span> 봄맞이 세트상품 65%↓ 한정판매!</li>
+        <li><span class="green">라리아네</span> 봄나들이 여성룩 최대 50% 할인!</li>
+        <li><span class="green">우리마트</span> 우수 농특산물 직거래 장터</li>
+        <li><span class="blue">우리몰</span> 소상공인과 함께하는 경제적인 아이템</li>
+        <li><span class="blue">골드스타</span> 15K 금값 폭락! 최대 35% 할인!</li>
+    </ul>
+    <br><br>
+    <a href="index.html">메인으로</a>
+</body>
+</html>
