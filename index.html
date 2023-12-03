@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop</title>
+    <style>
+        /*통합*/
+        @font-face {
+        font-family: 'LINESeedKR-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'LINESeedKR-Rg';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clear {
+            clear: both;
+        }
+        body {
+            font-family: 'LINESeedKR-Rg';
+            background-image: url(./source/bg.jpg);
+            color: white;
+            max-width: 1920px;
+        }
+        h1, h2, h3 {
+            font-family: "LINESeedKR-Bd";
+        }
+        li {
+            list-style-type: none;
+            float: left;
+            margin-right: 25px;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            float: left;
+            height: 50px;
+            margin-bottom: 10px;
+            background: transparent;
+            filter: brightness(100%);
+            backdrop-filter: blur(15px);
+            border-bottom: solid 0.5px #4f4f4f;
+            box-shadow: 0 0 15px black;
+        }
+        nav {
+            float: left;
+            width: 100%;
+            height: 50px;
+        }
+        nav li {
+            padding: 13.5px;
+            display: flex;
+        }
+        #nav_menu {
+            float: left;
+            height: 50px;
+        }
+        #logo {
+            float: left;
+            margin: 5px 20px 0 25px;
+        }
+        #logo img {
+            border-radius: 20%;
+        }
+        #nav_text {
+            float: left;
+            margin: 15px 55px 0 0;
+            font-family: 'LINESeedKR-Bd';
+        }
+        #top_menu {
+            float: right;
+            height: 50px;
+            margin-right: 15px;
+            padding-top: 13px;
+        }
+        #top_menu p {
+            float: right;
+        }
+        #top_menu img {
+            float: right;
+            margin: 5px 15px 0 0;
+        }
+        #bg_dark {
+            position: relative;
+            z-index: -1;
+            background-color: black;
+            filter: opacity(30%);
+            width: 100%;
+            height: 50px;
+        }
+        section {
+            float: left;
+            border: solid 1px red;
+            width: calc(100% - 320px);
+            height: 1750px;
+            margin: 85px 0 0 40px;
+        }
+        .icon {
+            text-align: center;
+            width: 100px;
+            height: 130px;
+            border: solid 1px red;
+            margin-bottom: 20px;
+        }
+        .icon img {
+            border-radius: 20px;
+        }
+        .icon p {
+            text-shadow: 0 0 10px #c0c0c0;
+        }
+        a:link, a:visited {
+            margin-right: 10px;
+            padding: 14px 15px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            margin-right: 10px;
+            padding: 14px 15px;
+            color: black;
+            background-color: rgba(255, 255, 255, .9);
+            border-radius: 5px;
+        }
+
+        /*추가*/
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="./source/logo.jpg" width="40">
+            </div>
+            <p id="nav_text">Desktop</p>
+
+            <div id="nav_menu">
+                <a href="profile.html">Profile</a>
+                <a href="profile.html">2D Artworks</a>
+                <a href="profile.html">Motion Graphics</a>
+                <a href="profile.html">3D Graphics</a>
+                <a href="profile.html">Unity</a>
+            </div>
+
+
+            <div id="top_menu">
+                <p>12월 8일 (금) 09:41</p>
+                <img src="./source/wifi.png" width="20">
+                <img src="./source/speaker.png" width="20">
+                <img src="./source/A.png" width="20">
+            </div>
+        </nav>
+        <div id="bg_dark">
+            
+        </nav>
+
+    </header>
+    
+
+
+
+
+    <section>
+        <div class="icon">
+            <img src="./source/logo.jpg" width="100">
+            <p>Profile</p>
+        </div>
+
+        <div class="icon">
+
+        </div>
+
+        <div class="icon">
+
+
+        </div>
+
+        <div class="icon">
+
+            
+        </div>
+
+        <div class="icon">
+
+            
+        </div>
+    </section>
+</body>
+</html>
