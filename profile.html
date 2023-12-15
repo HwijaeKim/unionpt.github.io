@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="./source/logo.jpg">
+    <style>
+        /*통합*/
+        @font-face {
+        font-family: 'LINESeedKR-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'LINESeedKR-Rg';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'D2Coding';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clear {
+            clear: both;
+        }
+        body {
+            font-family: 'LINESeedKR-Rg';
+            background-image: url(./source/bg.jpg);
+            color: white;
+        }
+        h1, h2, h3 {
+            font-family: "LINESeedKR-Bd";
+        }
+        li {
+            list-style-type: none;
+            float: left;
+            margin-right: 25px;
+        }
+        header {
+            float: left;
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            background: transparent;
+            filter: brightness(100%);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px); /*Safari 전용 blur*/
+            border-bottom: solid 0.5px #4f4f4f;
+            box-shadow: 0 0 15px black;
+        }
+        nav {
+            float: left;
+            width: 100%;
+            height: 50px;
+        }
+        #logo_a {
+            float: left;
+            margin: 5px 0 0 25px;
+        }
+        #nav_menu {
+            float: left;
+            height: 50px;
+        }
+        #logo {
+            float: left;
+        }
+        #logo img {
+            border-radius: 20%;
+        }
+        #nav_text {
+            float: right;
+            margin: 14px 0 0 15px;
+            width: 150px;
+            height: 50px;
+            font-family: 'LINESeedKR-Bd';
+        }
+        #top_menu {
+            float: right;
+            height: 50px;
+            margin-right: 15px;
+            padding-top: 13px;
+        }
+        #top_menu p {
+            float: right;
+        }
+        #top_menu img {
+            float: right;
+            margin: 5px 15px 0 0;
+        }
+        #bg_dark {
+            position: relative;
+            z-index: -1;
+            background-color: black;
+            filter: opacity(30%);
+            width: 100%;
+            height: 50px;
+        }
+        section {
+            float: left;
+            height: calc(100%);
+            width: 100%;
+            margin: 90px auto;
+        }
+        .icon {
+            text-align: center;
+            width: 100px;
+            height: 130px;
+
+            margin-bottom: 20px;
+        }
+        .icon img {
+            border-radius: 20px;
+        }
+        .icon p {
+            text-shadow: 0 0 10px #c0c0c0;
+        }
+        footer {
+            font-family: 'D2Coding';
+            background-color: black;
+            height: 100px;
+            padding: 20px;
+            margin-top: 150px;
+        }
+        footer p {
+            color: #b5b5b5;
+            font-size: 14px;
+        }
+        #footer_left {
+            float: left;
+        }
+        #footer_right {
+            float: right;
+            text-align: right;
+        }
+        .nav_a:link, .nav_a:visited {
+            margin-right: 10px;
+            padding: 14px 15px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .nav_a:hover, .nav_a:active {
+            margin-right: 10px;
+            padding: 14px 15px;
+            color: white;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 10px;
+        }
+        .active {
+            text-decoration: none;
+            margin-right: 10px;
+            padding: 14px 15px;
+            color: white;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 10px;
+        }
+
+        /*추가*/
+
+        #section2 {
+            width: 1260px;
+            height: 800px;
+            margin: 0 auto;
+        }
+        .container {
+            float: left;
+            width: 350px;
+            height: 350px;
+            margin: 50px 15px 15px ;
+            background-color: #fff;
+            color: black;
+            border-radius: 15px;
+        }
+        .container_top {
+            text-align: center;
+            width: 350px;
+            height: 25px;
+            padding-top: 5px;
+            font-size: 14px;
+            background-color: lightgray;
+            border-radius: 15px 15px 0 0;
+        }
+        .container_contents_left {
+            float: left;
+            margin: 32px 0 0 40px;
+            min-width: 70px;
+        }
+        .container_contents_right {
+            float: left;
+            text-align: right;
+            margin: 32px 0 0 40px;
+        }
+        .container2 {
+            float: left;
+            width: 850px;
+            height: 350px;
+            margin: 50px 15px 15px 15px;
+            background-color: black;
+            color: black;
+            border-radius: 15px;
+        }
+        .container2 p {
+            font-family: "D2Coding";
+            color: #00ff0c;
+        }
+        .container2_top {
+            text-align: center;
+            width: 850px;
+            height: 25px;
+            padding-top: 5px;
+            font-size: 14px;
+            background-color: lightgray;
+            border-radius: 15px 15px 0 0;
+        }
+        .container3 {
+            float: left;
+            width: 750px;
+            height: 350px;
+            margin: 20px 15px 15px ;
+            background-color: #fff;
+            color: black;
+            border-radius: 15px;
+        }
+        .container3_top {
+            text-align: center;
+            width: 750px;
+            height: 25px;
+            padding-top: 5px;
+            font-size: 14px;
+            background-color: lightgray;
+            border-radius: 15px 15px 0 0;
+        }
+        .container4 {
+            float: left;
+            width: 450px;
+            height: 350px;
+            margin: 20px 15px 15px ;
+            background-color: #fff;
+            color: black;
+            border-radius: 15px;
+        }
+        .container4_top {
+            text-align: center;
+            width: 450px;
+            height: 25px;
+            padding-top: 5px;
+            font-size: 14px;
+            background-color: lightgray;
+            border-radius: 15px 15px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html" id="logo_a"><img src="./source/logo.jpg" width="40"></a>
+                <p id="nav_text">Profile</p>
+            </div>
+            
+
+            <div id="nav_menu">
+                <a href="profile.html" class="active">Profile</a>
+                <a href="2d_artworks.html" class="nav_a">2D Artworks</a>
+                <a href="motion_graphics.html" class="nav_a">Motion Graphics</a>
+                <a href="3d_graphics.html" class="nav_a">3D Graphics</a>
+                <a href="unity.html" class="nav_a">Unity</a>
+            </div>
+
+
+            <div id="top_menu">
+                <p>12월 21일 (목)</p>
+                <img src="./source/wifi.png" width="20">
+                <img src="./source/speaker.png" width="20">
+                <img src="./source/A.png" width="20">
+            </div>
+        </nav>
+        <div id="bg_dark"></div>
+    </header>
+
+<!--구분선-->
+
+    <section>
+        <div id="section2">
+            <div class="container">
+                <div class="container_top">
+                    <p>프로필</p>
+                </div>
+                <div class="container_contents_left">
+                    <video src="./source/profile2mp4.mp4" width="250" muted autoplay loop></video>
+                </div>
+            </div>
+    
+    
+            <div class="container2">
+                <div class="container2_top">
+                    기본프로필 (en_US)
+                </div>
+                <div class="container_contents_right">
+                    <p>NAME <br><br> BIRTH <br><br> MBTI <br><br> E-MAIL <br><br> INSTAGRAM <br><br><br> </p>
+                </div>
+                <div class="container_contents_left">
+                    <p>KIM HWIJAE <br><br> 2002 <br><br> ISTP-T <br><br> kohga6007@kaywon.ac.kr <br><br> Primary &nbsp;&nbsp;| @hwijae_kim <br> Portfolio | @hwijae_portfolio</p>
+                </div>
+
+                <div class="container_contents_left">
+                    <p>EDUCATION <br><br><br><br><br><br> USER MODE</p>
+                </div>
+                <div class="container_contents_left">
+                    <p>Sunrin Internet High School <br><br> Kaywon University of Art & Design <br> | Digital Media Design <br><br><br> Early Adoptor</p>
+                </div>
+            </div>
+            
+            
+            <div class="container3">
+                <div class="container3_top">
+                    소프트웨어 운용능력 & 자격증
+                </div>
+                <img src="./source/skill.png" width="750">
+            </div>
+
+
+            <div class="container4">
+                <div class="container4_top">
+                    관심사
+                </div>
+                <img src="./source/fav.png" width="450">
+            </div>
+        </div>
+    </section>
+    <div class="clear"></div>
+
+<!--구분선-->
+
+    <footer>
+        <div id="footer_left">
+            <p>Project Info. <br> Web Publishing Final Project | Desktop Concept Website Design.</p>
+            <br>
+            <p>Contact. <br> E-MAIL | kohga6007@kaywon.ac.kr <br> INSTAGRAM | Primary: @hwijae_kim &nbsp;&nbsp; Portfolio: @hwijae_portfolio</p>
+        </div>
+
+        <div id="footer_right">
+            <p>Education. <br> Kaywon University of Art & Design | Digital Media Design</p>
+            <br>
+            <p>Copyright. <br> ©2023. KIM HWIJAE. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
